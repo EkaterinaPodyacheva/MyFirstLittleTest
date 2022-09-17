@@ -50,7 +50,15 @@ try:
     time.sleep(3)
 
 #вводим ответ в поле
-    input_answer = browser.find_element(By.XPATH, "//textarea[@spellcheck='false']").send_keys("123")
+    input_answer = browser.find_element(By.XPATH, "//textarea[@spellcheck='false']").send_keys("28.910485863594698")
+    time.sleep(3)
+    browser.execute_script("window.scrollBy(0, 250);")
+    time.sleep(3)
+    send = browser.find_element(By.XPATH, "////button[@class='submit-submission']").click()  #отправляем ответ
+    time.sleep(3)
+#Праверяем правильность ответа
+    correct_answer = browser.find_element(By.CSS_SELECTOR, ".attempt-message_correct")
+    assert "Так точно!" == correct_answer
     time.sleep(3)
 
 finally:
