@@ -32,10 +32,9 @@ try:
     input = browser.find_element(By.CSS_SELECTOR, "input[placeholder='Название курса, автор или предмет']")
     input.send_keys("Автоматизация тестирования с помощью Selenium и Python")
     input.send_keys(Keys.ENTER)
-    time.sleep(7)
+    browser.implicitly_wait(30)
 
 #кликаем на нужный курс
-    browser.switch_to.window(browser.window_handles[0])
     course = browser.find_element(By.XPATH, "//a[@aria-label='Автоматизация тестирования с помощью Selenium и Python']")
     course.click()
     time.sleep(5)
