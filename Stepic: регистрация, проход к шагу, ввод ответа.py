@@ -55,7 +55,7 @@ try:
     time.sleep(3)
     send = browser.find_element(By.XPATH, "////button[@class='submit-submission']").click()  #отправляем ответ
     time.sleep(3)
-#Праверяем правильность ответа
+#Проверяем правильность ответа
     correct_answer = browser.find_element(By.CSS_SELECTOR, ".attempt-message_correct")
     assert "Так точно!" == correct_answer
     time.sleep(3)
