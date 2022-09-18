@@ -16,12 +16,12 @@ try:
     browser.switch_to.window(browser.window_handles[0])
     email = browser.find_element(By.CSS_SELECTOR, "#id_login_email")
     email.clear()
-    email.send_keys("*****")
+    email.send_keys("katrinstanford@gmail.com")
     time.sleep(1)
 
     password = browser.find_element(By.CSS_SELECTOR, "#id_login_password")
     password.clear()
-    password.send_keys("*****")
+    password.send_keys("angelika45")
     time.sleep(1)
 
     password.send_keys(Keys.ENTER) #нажимаем Enter
@@ -56,7 +56,7 @@ try:
     send = browser.find_element(By.XPATH, "////button[@class='submit-submission']").click()  #отправляем ответ
     time.sleep(3)
 #Проверяем правильность ответа
-    correct_answer = browser.find_element(By.CSS_SELECTOR, ".attempt-message_correct")
+    correct_answer = browser.find_element(By.CSS_SELECTOR, ".attempt-message_correct") #отредактировать
     assert "Так точно!" == correct_answer
     time.sleep(3)
 
