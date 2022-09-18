@@ -16,12 +16,12 @@ try:
     browser.switch_to.window(browser.window_handles[0])
     email = browser.find_element(By.CSS_SELECTOR, "#id_login_email")
     email.clear()
-    email.send_keys("katrinstanford@gmail.com")
+    email.send_keys("******")
     time.sleep(1)
 
     password = browser.find_element(By.CSS_SELECTOR, "#id_login_password")
     password.clear()
-    password.send_keys("angelika45")
+    password.send_keys("******")
     time.sleep(1)
 
     password.send_keys(Keys.ENTER) #нажимаем Enter
